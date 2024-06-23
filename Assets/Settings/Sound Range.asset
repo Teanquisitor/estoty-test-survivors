@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8566c19b08c85049ab27ab0bbc2b4c6, type: 3}
+  m_Name: Sound Range
+  m_EditorClassIdentifier: 
+  soundName: Range
+  clip: {fileID: 8300000, guid: 6f0c572d865b4664db7a460972bc4768, type: 3}
+  volume: 0.1
+  pitch: 1
