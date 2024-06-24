@@ -54,6 +54,7 @@ Develop a Survivor's-Like Shooter mobile game.
 ● Health potion - recovers player health
 
 ● Ammo box - recovers player ammo
+
 Make sure to provide scriptable object configs for each gameplay element so they can be
 configured by game designers
 (For example: enemy spawn rate; health, damage, speed of each enemy; player shooting range
