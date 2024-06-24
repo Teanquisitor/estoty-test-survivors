@@ -1,8 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
+    private static List<Enemy> activeEnemies = new List<Enemy>();
     private float separationDistance = 1f;
     private float lootDropRadius = 1f;
 
@@ -18,8 +20,19 @@ public class Enemy : MonoBehaviour
     public Health Health => health;
 
     private void Awake() => health = GetComponent<Health>();
-    private void OnEnable() => health.OnDied += HandleDeath;
-    private void OnDisable() => health.OnDied -= HandleDeath;
+    private void OnEnable()
+    {
+        health.OnDied += HandleDeath;
+
+        activeEnemies.Add(this);
+    }
+
+    private void OnDisable()
+    {
+        activeEnemies.Remove(this);
+
+        health.OnDied -= HandleDeath;
+    }
 
     private void Update()
     {
@@ -58,9 +71,8 @@ public class Enemy : MonoBehaviour
     private Vector2 CalculateSeparationForce()
     {
         var separationForce = Vector2.zero;
-        var enemies = FindObjectsOfType<Enemy>();
 
-        foreach (var enemy in enemies)
+        foreach (var enemy in activeEnemies)
         {
             if (enemy == this)
                 continue;
