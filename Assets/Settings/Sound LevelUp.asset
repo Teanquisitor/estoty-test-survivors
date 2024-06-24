@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundName: LevelUp
   clip: {fileID: 8300000, guid: 64795b87003c2324fa0814fbc336066c, type: 3}
-  volume: 0.1
+  volume: 0.2
   pitch: 1

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 5
   attractionRadius: 4
-  attractionSpeed: 6.5
+  attractionSpeed: 7
   collectRadius: 0.5

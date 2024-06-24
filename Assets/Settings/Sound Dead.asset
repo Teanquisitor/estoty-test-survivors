@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundName: Dead
   clip: {fileID: 8300000, guid: 291608b8d286e2a4580ff36324455ce2, type: 3}
-  volume: 0.125
+  volume: 0.2
   pitch: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Spawner Settings
   m_EditorClassIdentifier: 
   initialSpawnInterval: 1
-  minSpawnInterval: 0.01
+  finalSpawnInterval: 0.05
   spawnRateIncreaseInterval: 30
   spawnRateIncreaseAmount: 0.1
-  initialSpawnDelay: 2
+  initialSpawnDelay: 2.5

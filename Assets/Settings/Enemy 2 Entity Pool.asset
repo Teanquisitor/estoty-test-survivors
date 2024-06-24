@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Enemy 2 Entity Pool
   m_EditorClassIdentifier: 
   tag: Enemy 2
-  poolSize: 40
+  poolSize: 32
   entitySettings:
     prefab: {fileID: 4480096160022923295, guid: 31e571761ee9b2b48a68cf92d69d1458, type: 3}
-    health: 8
+    health: 16
     damage: 8
     speed: 3
     attackRange: 1.25

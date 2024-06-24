@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e239267c42140604e814611903ab669e, type: 3}
   m_Name: Player Settings
   m_EditorClassIdentifier: 
-  maxHealth: 50
+  maxHealth: 64
   speed: 5
   levelUpExperience: 16
   weaponSettings:
@@ -20,6 +20,6 @@ MonoBehaviour:
     shootSound: Range
     initialAmmo: 32
     damage: 8
-    projectileSpeed: 10
-    fireRate: 2.5
-    fireRange: 10
+    projectileSpeed: 8
+    fireRate: 2.4
+    fireRange: 8

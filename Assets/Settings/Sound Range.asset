@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundName: Range
   clip: {fileID: 8300000, guid: 6f0c572d865b4664db7a460972bc4768, type: 3}
-  volume: 0.1
+  volume: 0.2
   pitch: 1

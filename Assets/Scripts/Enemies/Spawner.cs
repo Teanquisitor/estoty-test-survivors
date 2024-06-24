@@ -60,7 +60,7 @@ public class Spawner : MonoBehaviour
     {
         if (timer - lastSpawnRateIncreaseTime >= spawnerSettings.spawnRateIncreaseInterval)
         {
-            currentSpawnInterval = Mathf.Max(currentSpawnInterval - spawnerSettings.spawnRateIncreaseAmount, spawnerSettings.minSpawnInterval);
+            currentSpawnInterval = Mathf.Max(currentSpawnInterval - spawnerSettings.spawnRateIncreaseAmount, spawnerSettings.finalSpawnInterval);
             lastSpawnRateIncreaseTime = timer;
 
             CancelInvoke(nameof(SpawnEnemies));

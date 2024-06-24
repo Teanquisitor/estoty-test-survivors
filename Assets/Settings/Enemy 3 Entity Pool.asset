@@ -13,19 +13,19 @@ MonoBehaviour:
   m_Name: Enemy 3 Entity Pool
   m_EditorClassIdentifier: 
   tag: Enemy 3
-  poolSize: 20
+  poolSize: 8
   entitySettings:
     prefab: {fileID: 463445255324677330, guid: ad783fd2e9761104291b68ed7796d33d, type: 3}
-    health: 48
-    damage: 8
+    health: 72
+    damage: 16
     speed: 4
-    attackRange: 1.5
+    attackRange: 2
     damageInterval: 1
   experience:
     prefab: {fileID: 4365529716192505159, guid: 781f9773c4c6fa147bc3917e27a65a06, type: 3}
-    amount: 10
+    amount: 16
   lootTables:
   - prefab: {fileID: 6670616618506784337, guid: d78c820ff985bbf488255ad40f5688c2, type: 3}
-    amount: 5
+    amount: 8
   - prefab: {fileID: 2902435061628787029, guid: f9ff441b659a4ff42935a1cdd60c1c2b, type: 3}
-    amount: 6
+    amount: 8
