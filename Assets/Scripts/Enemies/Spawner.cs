@@ -39,7 +39,7 @@ public class Spawner : MonoBehaviour
         {
             var objectPool = new Queue<GameObject>();
 
-            for (var i = 0; i < pool.initialPoolSize; i++)
+            for (var i = 0; i < pool.poolSize; i++)
             {
                 var obj = CreatePoolObject(pool.entitySettings.prefab);
                 objectPool.Enqueue(obj);
@@ -77,15 +77,8 @@ public class Spawner : MonoBehaviour
 
         if (objectToSpawn.activeInHierarchy)
         {
-            var pool = pools.Find(x => x.tag == tag);
-            if (pool == null || objectPool.Count >= pool.maxPoolSize)
-            {
-                objectPool.Enqueue(objectToSpawn);
-                return null;
-            }
-
-            ExpandPool(tag, 1);
-            objectToSpawn = objectPool.Dequeue();
+            objectPool.Enqueue(objectToSpawn);
+            return null;
         }
 
         SetupSpawnedObject(objectToSpawn, tag, position);
@@ -105,23 +98,6 @@ public class Spawner : MonoBehaviour
         enemy.Initialize(player, pool.entitySettings, loot);
         obj.transform.SetPositionAndRotation(position, Quaternion.identity);
         obj.SetActive(true);
-    }
-
-    private void ExpandPool(string tag, int expansionAmount)
-    {
-        var pool = pools.Find(x => x.tag == tag);
-        if (pool == null)
-            return;
-
-        var currentSize = poolDictionary[tag].Count;
-        var remainingSpace = pool.maxPoolSize - currentSize;
-        var actualExpansionAmount = Mathf.Min(expansionAmount, remainingSpace);
-
-        for (var i = 0; i < actualExpansionAmount; i++)
-        {
-            var obj = CreatePoolObject(pool.entitySettings.prefab);
-            poolDictionary[tag].Enqueue(obj);
-        }
     }
 
     private void SpawnEnemies()

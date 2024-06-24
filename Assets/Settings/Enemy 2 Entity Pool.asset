@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Enemy 2 Entity Pool
   m_EditorClassIdentifier: 
   tag: Enemy 2
-  initialPoolSize: 16
-  maxPoolSize: 32
+  poolSize: 40
   entitySettings:
     prefab: {fileID: 4480096160022923295, guid: 31e571761ee9b2b48a68cf92d69d1458, type: 3}
     health: 8

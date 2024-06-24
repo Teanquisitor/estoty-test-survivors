@@ -4,8 +4,7 @@ using UnityEngine;
 public class PoolSO : ScriptableObject
 {
     public string tag;
-    public int initialPoolSize;
-    public int maxPoolSize;
+    public int poolSize;
 
     public EntitySettings entitySettings;
     public LootTable experience;
