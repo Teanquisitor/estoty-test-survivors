@@ -68,16 +68,6 @@ public class Enemy : MonoBehaviour
         health.ResetHealth();
     }
 
-    public static Enemy GetEnemyFromCollider(Collider2D collider)
-    {
-        foreach (var enemy in activeEnemies)
-        {
-            if (enemy.gameObject == collider.gameObject)
-                return enemy;
-        }
-        return null;
-    }
-
     private Vector2 CalculateSeparationForce()
     {
         var separationForce = Vector2.zero;
