@@ -7,6 +7,10 @@ APK for Download - https://drive.google.com/file/d/1MfD8ZRWp5L4yc6bk_VUTbOuxy3cC
 
 APK for Download (rebalanced) - https://drive.google.com/file/d/1REJKbuGi3aOAzGzBJ8mVf9aGG9pTAbEo/view?usp=sharing
 
+2024-06-25
+
+APK for Download (quests) - https://drive.google.com/file/d/145QVpmrkiC5KeE8zQz5p3exuAl8bC-Ob/view?usp=sharing
+
 ## Initial Challenges and Solutions
 One of the first issues I faced was getting the joystick to work for player movement. The problem was that the Canvas was disabled for interactions. After an hour of troubleshooting, I fixed this by creating a new Canvas. I ended up using two Canvases, which worked well.
 
