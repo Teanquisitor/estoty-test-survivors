@@ -19,3 +19,7 @@ MonoBehaviour:
     times: 30
   - type: 2
     times: 2
+  - type: 0
+    times: 100
+  - type: 2
+    times: 50
