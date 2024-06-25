@@ -1,10 +1,8 @@
-using DependencyInjection;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Joystick : MonoBehaviour, IDependencyProvider, IDragHandler, IPointerDownHandler, IPointerUpHandler
+public class Joystick : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler
 {
-    [Provide] private Joystick ProvideJoystick() => this;
     [SerializeField] private RectTransform background;
     [SerializeField] private RectTransform handle;
     private Vector2 inputVector;

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using DependencyInjection;
 using UnityEngine;
+using Zenject;
 
 public class Spawner : MonoBehaviour
 {

@@ -1,11 +1,9 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
-using DependencyInjection;
 
-public class AudioManager : MonoBehaviour, IDependencyProvider
+public class AudioManager : MonoBehaviour
 {
-    [Provide] private AudioManager ProvideAudioManager() => this;
     [SerializeField] private List<SoundSO> sounds;
     private AudioSource sfxSource;
     private AudioSource bgmSource;

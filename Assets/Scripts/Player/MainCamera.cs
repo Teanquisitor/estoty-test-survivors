@@ -1,9 +1,8 @@
-using DependencyInjection;
 using UnityEngine;
+using Zenject;
 
-public class MainCamera : MonoBehaviour, IDependencyProvider
+public class MainCamera : MonoBehaviour
 {
-    [Provide] private MainCamera ProvideCamera() => this;
     [Inject] private Player target;
     [SerializeField] private Vector3 offset;
     [SerializeField] private float smoothSpeed = 0.125f;

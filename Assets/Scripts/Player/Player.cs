@@ -1,11 +1,9 @@
-using System;
-using DependencyInjection;
 using UnityEngine;
 using UnityEngine.Events;
+using Zenject;
 
-public class Player : MonoBehaviour, IDependencyProvider
+public class Player : MonoBehaviour
 {
-    [Provide] private Player ProvidePlayer() => this;
     [Inject] private Joystick joystick;
     [Inject] private AudioManager audioManager;
     [SerializeField] private Weapon weapon;

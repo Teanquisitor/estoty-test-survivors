@@ -1,6 +1,6 @@
 using System.Linq;
-using DependencyInjection;
 using UnityEngine;
+using Zenject;
 
 public class Weapon : MonoBehaviour
 {
