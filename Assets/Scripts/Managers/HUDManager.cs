@@ -33,17 +33,6 @@ public class HUDManager : MonoBehaviour
     private const string SurviveQuestTemplate = "Survive for {0} seconds. {1}";
     private const string LevelUpQuestTemplate = "Gain {0} levels. {1}";
 
-    private void Start()
-    {
-        var questsCount = questsManager.Quests.quests.Length;
-        for (var i = 0; i < questsCount; i++)
-        {
-            var quest = Instantiate(questText, questContainer);
-            questTexts.Add(questsManager.Quests.quests[i], quest);
-            UpdateQuestProgress(questsManager.Quests.quests[i], 0);
-        }
-    }
-
     private void OnEnable()
     {
         foreach (var quest in questsManager.Quests.quests)
