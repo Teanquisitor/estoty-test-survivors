@@ -56,7 +56,10 @@ public class QuestsManager : MonoBehaviour
                 continue;
 
             if (quest.times <= amount)
+            {
                 OnQuestCompleted?.Invoke(quest);
+                continue;
+            }
 
             OnQuestUpdated?.Invoke(quest, amount);
         }
