@@ -46,6 +46,13 @@ public class HUDManager : MonoBehaviour
 
     private void OnEnable()
     {
+        foreach (var quest in questsManager.Quests.quests)
+        {
+            var text = Instantiate(questText, questContainer);
+            questTexts.Add(quest, text);
+            UpdateQuestProgress(quest, 0);
+        }
+
         player.OnDied += DeathScreen;
         player.OnKill += v => SetText(killCountText, v.ToString());
         player.OnLevelUp += v => SetText(levelText, levelPrefix + v.ToString());
@@ -70,6 +77,11 @@ public class HUDManager : MonoBehaviour
         player.OnLevelUp -= v => SetText(levelText, levelPrefix + v.ToString());
         player.OnKill -= v => SetText(killCountText, v.ToString());
         player.OnDied -= DeathScreen;
+
+        foreach (var questText in questTexts.Values)
+            Destroy(questText.gameObject);
+
+        questTexts.Clear();
     }
 
     private void DeathScreen()
@@ -109,7 +121,7 @@ public class HUDManager : MonoBehaviour
 
     private void UpdateQuestProgress(Quest quest, int amount)
     {
-        if (!questTexts.TryGetValue(quest, out var questText))
+        if (questTexts == null || !questTexts.TryGetValue(quest, out var questText))
             return;
 
         questText.text = string.Format(GetTemplate(quest.type), quest.times, $"{amount}/{quest.times}");
@@ -117,7 +129,7 @@ public class HUDManager : MonoBehaviour
 
     private void FinishQuest(Quest quest)
     {
-        if (!questTexts.TryGetValue(quest, out var questText))
+        if (questTexts == null || !questTexts.TryGetValue(quest, out var questText))
             return;
         
         questText.text = string.Format(GetTemplate(quest.type), quest.times, "Done");

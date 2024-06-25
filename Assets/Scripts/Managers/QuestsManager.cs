@@ -50,6 +50,8 @@ public class QuestsManager : MonoBehaviour
 
     private void OnQuestProgress(QuestType questType, int amount)
     {
+        if (quests == null || quests.quests == null) return;
+
         foreach (var quest in quests.quests)
         {
             if (quest.type != questType)
