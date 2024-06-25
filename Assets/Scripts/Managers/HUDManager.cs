@@ -35,18 +35,18 @@ public class HUDManager : MonoBehaviour
 
     private void OnEnable()
     {
-        foreach (var quest in questsManager.Quests.quests)
-        {
-            var text = Instantiate(questText, questContainer);
-            questTexts.Add(quest, text);
-            UpdateQuestProgress(quest, 0);
-        }
-
         player.OnDied += DeathScreen;
         player.OnKill += v => SetText(killCountText, v.ToString());
         player.OnLevelUp += v => SetText(levelText, levelPrefix + v.ToString());
         player.OnHealthChanged += v => SetValue(healthSlider, v);
         player.OnExperienceChanged += v => SetValue(experienceSlider, v);
+
+        foreach (var quest in questsManager.Quests)
+        {
+            var text = Instantiate(questText, questContainer);
+            questTexts.Add(quest, text);
+            UpdateQuestProgress(quest, 0);
+        }
 
         questsManager.OnQuestUpdated += UpdateQuestProgress;
         questsManager.OnQuestCompleted += FinishQuest;
@@ -61,16 +61,16 @@ public class HUDManager : MonoBehaviour
         questsManager.OnQuestCompleted -= FinishQuest;
         questsManager.OnQuestUpdated -= UpdateQuestProgress;
 
+        foreach (var questText in questTexts.Values)
+            Destroy(questText.gameObject);
+
+        questTexts.Clear();
+
         player.OnExperienceChanged -= v => SetValue(experienceSlider, v);
         player.OnHealthChanged -= v => SetValue(healthSlider, v);
         player.OnLevelUp -= v => SetText(levelText, levelPrefix + v.ToString());
         player.OnKill -= v => SetText(killCountText, v.ToString());
         player.OnDied -= DeathScreen;
-
-        foreach (var questText in questTexts.Values)
-            Destroy(questText.gameObject);
-
-        questTexts.Clear();
     }
 
     private void DeathScreen()

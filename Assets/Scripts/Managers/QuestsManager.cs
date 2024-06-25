@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Zenject;
@@ -8,15 +9,15 @@ public class QuestsManager : MonoBehaviour
     [Inject] private Player player;
     [SerializeField] private QuestsSO quests;
 
-    public QuestsSO Quests => quests;
+    public List<Quest> Quests => quests.quests;
 
     public UnityAction<Quest, int> OnQuestUpdated;
     public UnityAction<Quest> OnQuestCompleted;
 
-    private void Start() => StartCoroutine(Timer());
-
     private void OnEnable()
     {
+        StartCoroutine(Timer());
+        
         player.OnKill += v => OnQuestProgress(QuestType.Kill, v);
         player.OnLevelUp += v => OnQuestProgress(QuestType.LevelUp, v);
     }
@@ -25,6 +26,8 @@ public class QuestsManager : MonoBehaviour
     {
         player.OnLevelUp -= v => OnQuestProgress(QuestType.LevelUp, v);
         player.OnKill -= v => OnQuestProgress(QuestType.Kill, v);
+
+        StopAllCoroutines();
     }
 
     private IEnumerator Timer()

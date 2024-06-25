@@ -1,13 +1,14 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Quests", menuName = "SO/Quests")]
 public class QuestsSO : ScriptableObject
 {
-    public Quest[] quests;
+    public List<Quest> quests;
 }
 
 [System.Serializable]
-public struct Quest
+public class Quest
 {
     public QuestType type;
     public int times;
