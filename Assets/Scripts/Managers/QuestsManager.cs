@@ -38,7 +38,7 @@ public class QuestsManager : MonoBehaviour
 
             while (remainingTime > 0)
             {
-                OnQuestUpdated?.Invoke(quest, remainingTime);
+                OnQuestUpdated?.Invoke(quest, quest.times - remainingTime);
 
                 yield return new WaitForSeconds(1f);
                 remainingTime -= 1;
