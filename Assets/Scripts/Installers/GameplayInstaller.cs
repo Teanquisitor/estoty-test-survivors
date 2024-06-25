@@ -8,5 +8,7 @@ public class GameplayInstaller : MonoInstaller
         Container.Bind<Player>().FromComponentInHierarchy().AsSingle();
         Container.Bind<MainCamera>().FromComponentInHierarchy().AsSingle();
         Container.Bind<AudioManager>().FromComponentInHierarchy().AsSingle();
+        Container.Bind<QuestsManager>().FromComponentInHierarchy().AsSingle();
     }
+
 }

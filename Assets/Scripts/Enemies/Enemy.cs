@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
-    private static List<Enemy> activeEnemies = new List<Enemy>();
+    private static List<Enemy> activeEnemies = new();
     private float separationDistance = 1f;
     private float lootDropRadius = 1f;
 

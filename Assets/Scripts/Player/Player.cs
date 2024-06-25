@@ -15,11 +15,11 @@ public class Player : MonoBehaviour
     private Rigidbody2D rigidBody;
     private Health health;
 
-    public static UnityAction OnDied;
-    public static UnityAction<int> OnKill;
-    public static UnityAction<int> OnLevelUp;
-    public static UnityAction<float> OnHealthChanged;
-    public static UnityAction<float> OnExperienceChanged;
+    public UnityAction OnDied;
+    public UnityAction<int> OnKill;
+    public UnityAction<int> OnLevelUp;
+    public UnityAction<float> OnHealthChanged;
+    public UnityAction<float> OnExperienceChanged;
 
     public Health Health => health;
     public Weapon Weapon => weapon;
