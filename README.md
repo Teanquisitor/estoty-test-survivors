@@ -1,15 +1,15 @@
 # Estoty Test Survivors
 2024-06-22 12:00 - 2024-06-24 03:00
 
-APK for Download - https://drive.google.com/file/d/1MfD8ZRWp5L4yc6bk_VUTbOuxy3cCEBio/view?usp=sharing
+APK for [Download](https://drive.google.com/file/d/1aFMF80OFAlIjVfRHvWcUw0BejFnhWQHv/view?usp=sharing) - https://drive.google.com/file/d/1MfD8ZRWp5L4yc6bk_VUTbOuxy3cCEBio/view?usp=sharing
 
 2024-06-24
 
-APK for Download (rebalanced) - https://drive.google.com/file/d/1REJKbuGi3aOAzGzBJ8mVf9aGG9pTAbEo/view?usp=sharing
+APK for [Download](https://drive.google.com/file/d/1aFMF80OFAlIjVfRHvWcUw0BejFnhWQHv/view?usp=sharing) (rebalanced) - https://drive.google.com/file/d/1REJKbuGi3aOAzGzBJ8mVf9aGG9pTAbEo/view?usp=sharing
 
 2024-06-25
 
-APK for Download (quests) - https://drive.google.com/file/d/145QVpmrkiC5KeE8zQz5p3exuAl8bC-Ob/view?usp=sharing
+APK for [Download](https://drive.google.com/file/d/1aFMF80OFAlIjVfRHvWcUw0BejFnhWQHv/view?usp=sharing) (quests) - https://drive.google.com/file/d/1aFMF80OFAlIjVfRHvWcUw0BejFnhWQHv/view?usp=sharing
 
 ## Initial Challenges and Solutions
 One of the first issues I faced was getting the joystick to work for player movement. The problem was that the Canvas was disabled for interactions. After an hour of troubleshooting, I fixed this by creating a new Canvas. I ended up using two Canvases, which worked well.
