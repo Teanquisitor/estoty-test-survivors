@@ -92,3 +92,6 @@ But you can’t use any other third party solutions for anything else.
 If you don’t have experience with Dependency Injection, please use the Service Locator
 pattern instead.
 The Singleton pattern is not allowed.
+
+# EXTRA
+● Add "Quests" feature to the game.
